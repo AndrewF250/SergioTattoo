@@ -17,7 +17,10 @@
 
 **https://andrewf250.github.io/SergioTattoo/**
 
-Сайт автоматически публикуется на GitHub Pages при каждом push в `main`.
+> Если ссылка пока не открывается — один раз включите GitHub Pages:
+> [Settings → Pages](https://github.com/AndrewF250/SergioTattoo/settings/pages) → **Build and deployment** → Source: **Deploy from a branch** → Branch: **gh-pages** / **/ (root)** → Save.
+
+Сайт автоматически обновляется при каждом push в `main` (ветка `gh-pages`).
 
 ## Локальный запуск
 
