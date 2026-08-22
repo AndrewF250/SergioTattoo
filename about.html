@@ -12,6 +12,7 @@
     (function () {
       var theme = localStorage.getItem("theme") || "light";
       document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.style.colorScheme = theme;
     })();
   </script>
   <link rel="stylesheet" href="css/style.css">
@@ -34,13 +35,28 @@
           <li><a href="services.html">Услуги</a></li>
           <li><a href="portfolio.html">Работы</a></li>
           <li><a href="sketches.html">Эскизы</a></li>
+          <li class="nav-theme-item">
+            <span class="nav-theme-label">Тема оформления</span>
+            <button class="theme-switch theme-switch--nav" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
+              <span class="theme-switch-track">
+                <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
+                <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
+                <span class="theme-switch-thumb" aria-hidden="true"></span>
+              </span>
+              <span class="theme-switch-text">Светлая</span>
+            </button>
+          </li>
           <li><a href="contact.html">Контакты</a></li>
         </ul>
       </nav>
       <div class="header-actions">
-        <button class="theme-toggle" type="button" aria-label="Сменить тему">
-          <span class="theme-icon-light">☀</span>
-          <span class="theme-icon-dark">☾</span>
+        <button class="theme-switch" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
+          <span class="theme-switch-track">
+            <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
+            <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
+            <span class="theme-switch-thumb" aria-hidden="true"></span>
+          </span>
+          <span class="theme-switch-text">Светлая</span>
         </button>
         <a href="contact.html" class="header-cta">Записаться</a>
       </div>
@@ -62,7 +78,7 @@
     <div class="container">
       <div class="split-section">
         <div class="split-image fade-in">
-          <img src="assets/images/master/sergio-avatar.jpg" alt="Сергей Фомин — тату-мастер">
+          <img src="assets/images/master/sergio-instagram.jpg" alt="Сергей Фомин — тату-мастер">
         </div>
         <div class="split-content fade-in">
           <span class="section-label">Сергей Фомин</span>
@@ -204,8 +220,30 @@
         <div class="footer-col">
           <h4>Студия</h4>
           <ul>
-            <li><a href="contact.html">Tattoo EXTRA</a></li>
-            <li><a href="contact.html">ул. Ленина, 27</a></li>
+            <li class="nav-theme-item">
+            <span class="nav-theme-label">Тема оформления</span>
+            <button class="theme-switch theme-switch--nav" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
+              <span class="theme-switch-track">
+                <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
+                <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
+                <span class="theme-switch-thumb" aria-hidden="true"></span>
+              </span>
+              <span class="theme-switch-text">Светлая</span>
+            </button>
+          </li>
+          <li><a href="contact.html">Tattoo EXTRA</a></li>
+            <li class="nav-theme-item">
+            <span class="nav-theme-label">Тема оформления</span>
+            <button class="theme-switch theme-switch--nav" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
+              <span class="theme-switch-track">
+                <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
+                <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
+                <span class="theme-switch-thumb" aria-hidden="true"></span>
+              </span>
+              <span class="theme-switch-text">Светлая</span>
+            </button>
+          </li>
+          <li><a href="contact.html">ул. Ленина, 27</a></li>
             <li><a href="tel:+73422101441">+7 (342) 210-14-41</a></li>
           </ul>
         </div>
@@ -224,6 +262,12 @@
       </div>
     </div>
   </footer>
+
+  
+  <div class="mobile-cta-bar">
+    <a href="portfolio.html" class="btn btn-outline">Работы</a>
+    <a href="contact.html" class="btn btn-primary">Записаться</a>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
