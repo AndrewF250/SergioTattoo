@@ -34,13 +34,28 @@
           <li><a href="services.html">Услуги</a></li>
           <li><a href="portfolio.html" class="active">Работы</a></li>
           <li><a href="sketches.html">Эскизы</a></li>
+          <li class="nav-theme-item">
+            <span class="nav-theme-label">Тема оформления</span>
+            <button class="theme-switch theme-switch--nav" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
+              <span class="theme-switch-track">
+                <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
+                <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
+                <span class="theme-switch-thumb" aria-hidden="true"></span>
+              </span>
+              <span class="theme-switch-text">Светлая</span>
+            </button>
+          </li>
           <li><a href="contact.html">Контакты</a></li>
         </ul>
       </nav>
       <div class="header-actions">
-        <button class="theme-toggle" type="button" aria-label="Сменить тему">
-          <span class="theme-icon-light">☀</span>
-          <span class="theme-icon-dark">☾</span>
+        <button class="theme-switch" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
+          <span class="theme-switch-track">
+            <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
+            <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
+            <span class="theme-switch-thumb" aria-hidden="true"></span>
+          </span>
+          <span class="theme-switch-text">Светлая</span>
         </button>
         <a href="contact.html" class="header-cta">Записаться</a>
       </div>
@@ -70,148 +85,147 @@
         <button class="filter-tab" data-filter="healed">Зажившие</button>
       </div>
 
-      <div class="gallery-grid gallery-masonry">
-        <div class="gallery-item fade-in" data-category="blackwork healed" data-lightbox data-caption="Рукав · Black & Gray · Заживший рукав для Артёма">
-          <img src="assets/images/works/work-16.jpg" alt="Заживший рукав для Артёма">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Рукав · Black & Gray</span>
-            <span class="gallery-title">Заживший рукав для Артёма</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Deus vult">
-          <img src="assets/images/works/work-09.jpg" alt="Deus vult">
+      <div class="gallery-grid gallery-masonry" data-stagger>
+        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Экстремальная детализация">
+          <img src="assets/images/instagram/ig-07.jpg" alt="Экстремальная детализация" loading="lazy">
           <div class="gallery-overlay">
             <span class="gallery-tag">Орнаментал</span>
-            <span class="gallery-title">Deus vult</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in" data-category="lettering" data-lightbox data-caption="Lettering · End of Eternity">
-          <img src="assets/images/works/work-05.jpg" alt="End of Eternity">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Lettering</span>
-            <span class="gallery-title">End of Eternity</span>
+            <span class="gallery-title">Экстремальная детализация</span>
           </div>
         </div>
         <div class="gallery-item fade-in" data-category="coverup" data-lightbox data-caption="Cover-up · Атмосферный закрас ноги">
-          <img src="assets/images/works/work-15.jpg" alt="Атмосферный закрас ноги">
+          <img src="assets/images/instagram/ig-08.jpg" alt="Атмосферный закрас ноги" loading="lazy">
           <div class="gallery-overlay">
             <span class="gallery-tag">Cover-up</span>
             <span class="gallery-title">Атмосферный закрас ноги</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-category="realism" data-lightbox data-caption="Реализм · Портретная работа">
-          <img src="assets/images/works/work-03.jpg" alt="Портретная работа">
+        <div class="gallery-item fade-in" data-category="blackwork" data-lightbox data-caption="Black & Gray · Масштабный проект">
+          <img src="assets/images/instagram/ig-09.jpg" alt="Масштабный проект" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Black & Gray</span>
+            <span class="gallery-title">Масштабный проект</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Нежные рыбки">
+          <img src="assets/images/instagram/ig-10.jpg" alt="Нежные рыбки" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Орнаментал</span>
+            <span class="gallery-title">Нежные рыбки</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="realism" data-lightbox data-caption="Black & Gray · Киберпанк">
+          <img src="assets/images/instagram/ig-11.jpg" alt="Киберпанк" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Black & Gray</span>
+            <span class="gallery-title">Киберпанк</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Фестиваль Пигменты">
+          <img src="assets/images/instagram/ig-03.jpg" alt="Фестиваль Пигменты" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Орнаментал</span>
+            <span class="gallery-title">Фестиваль Пигменты</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="blackwork healed" data-lightbox data-caption="Black & Gray · Заживший · Рукав для Артёма">
+          <img src="assets/images/works/work-16.jpg" alt="Рукав для Артёма" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Black & Gray · Заживший</span>
+            <span class="gallery-title">Рукав для Артёма</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Deus vult">
+          <img src="assets/images/works/work-09.jpg" alt="Deus vult" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Орнаментал</span>
+            <span class="gallery-title">Deus vult</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="lettering healed" data-lightbox data-caption="Lettering · Заживший · End of Eternity">
+          <img src="assets/images/works/work-05.jpg" alt="End of Eternity" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Lettering · Заживший</span>
+            <span class="gallery-title">End of Eternity</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="blackwork" data-lightbox data-caption="Процесс · Работа в студии">
+          <img src="assets/images/instagram/ig-12.jpg" alt="Работа в студии" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Процесс</span>
+            <span class="gallery-title">Работа в студии</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="realism" data-lightbox data-caption="Реализм · Награды Пигменты">
+          <img src="assets/images/instagram/ig-02.jpg" alt="Награды Пигменты" loading="lazy">
           <div class="gallery-overlay">
             <span class="gallery-tag">Реализм</span>
+            <span class="gallery-title">Награды Пигменты</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="realism healed" data-lightbox data-caption="Реализм · Заживший · Портретная работа">
+          <img src="assets/images/works/work-03.jpg" alt="Портретная работа" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Реализм · Заживший</span>
             <span class="gallery-title">Портретная работа</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-category="ornamental healed" data-lightbox data-caption="Орнаментал · Заживший · Детализация">
-          <img src="assets/images/works/work-07.jpg" alt="Детализация">
+        <div class="gallery-item fade-in" data-category="coverup" data-lightbox data-caption="Cover-up · Закрас">
+          <img src="assets/images/works/work-15.jpg" alt="Закрас" loading="lazy">
           <div class="gallery-overlay">
-            <span class="gallery-tag">Орнаментал · Заживший</span>
-            <span class="gallery-title">Детализация</span>
+            <span class="gallery-tag">Cover-up</span>
+            <span class="gallery-title">Закрас</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Фестиваль · Самара · Пигменты">
+          <img src="assets/images/instagram/ig-01.jpg" alt="Самара · Пигменты" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Фестиваль</span>
+            <span class="gallery-title">Самара · Пигменты</span>
           </div>
         </div>
         <div class="gallery-item fade-in" data-category="lettering" data-lightbox data-caption="Lettering · Именные надписи">
-          <img src="assets/images/works/work-12.jpg" alt="Именные надписи">
+          <img src="assets/images/works/work-12.jpg" alt="Именные надписи" loading="lazy">
           <div class="gallery-overlay">
             <span class="gallery-tag">Lettering</span>
             <span class="gallery-title">Именные надписи</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-category="realism healed" data-lightbox data-caption="Реализм · Заживший · Фотorealism">
-          <img src="assets/images/works/work-02.jpg" alt="Фотorealism">
+        <div class="gallery-item fade-in" data-category="ornamental healed" data-lightbox data-caption="Орнаментал · Заживший · Детализация">
+          <img src="assets/images/works/work-07.jpg" alt="Детализация" loading="lazy">
           <div class="gallery-overlay">
-            <span class="gallery-tag">Реализм · Заживший</span>
-            <span class="gallery-title">Фотorealism</span>
+            <span class="gallery-tag">Орнаментал · Заживший</span>
+            <span class="gallery-title">Детализация</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Геометрия">
-          <img src="assets/images/works/work-01.jpg" alt="Геометрия">
+        <div class="gallery-item fade-in" data-category="realism" data-lightbox data-caption="Lifestyle · Serge Fomin · фестиваль">
+          <img src="assets/images/instagram/ig-05.jpg" alt="Serge Fomin · фестиваль" loading="lazy">
           <div class="gallery-overlay">
-            <span class="gallery-tag">Орнаментал</span>
-            <span class="gallery-title">Геометрия</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in" data-category="blackwork" data-lightbox data-caption="Black & Gray · Конtrast и тени">
-          <img src="assets/images/works/work-04.jpg" alt="Конtrast и тени">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Black & Gray</span>
-            <span class="gallery-title">Конtrast и тени</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Linework">
-          <img src="assets/images/works/work-06.jpg" alt="Linework">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Орнаментал</span>
-            <span class="gallery-title">Linework</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in" data-category="lettering healed" data-lightbox data-caption="Lettering · Заживший · Damien & Taissa">
-          <img src="assets/images/works/work-08.jpg" alt="Damien & Taissa">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Lettering · Заживший</span>
-            <span class="gallery-title">Damien & Taissa</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in" data-category="blackwork" data-lightbox data-caption="Black & Gray · Детали #details">
-          <img src="assets/images/works/work-10.jpg" alt="Детали #details">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Black & Gray</span>
-            <span class="gallery-title">Детали #details</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in" data-category="realism" data-lightbox data-caption="Реализм · Объём и свет">
-          <img src="assets/images/works/work-11.jpg" alt="Объём и свет">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Реализм</span>
-            <span class="gallery-title">Объём и свет</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Микродетали">
-          <img src="assets/images/works/work-13.jpg" alt="Микродетали">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Орнаментал</span>
-            <span class="gallery-title">Микродетали</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in" data-category="lettering" data-lightbox data-caption="Lettering · Каллиграфия">
-          <img src="assets/images/works/work-14.jpg" alt="Каллиграфия">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Lettering</span>
-            <span class="gallery-title">Каллиграфия</span>
+            <span class="gallery-tag">Lifestyle</span>
+            <span class="gallery-title">Serge Fomin · фестиваль</span>
           </div>
         </div>
         <div class="gallery-item fade-in" data-category="blackwork healed" data-lightbox data-caption="Black & Gray · Заживший · Крупный проект">
-          <img src="assets/images/works/work-17.jpg" alt="Крупный проект">
+          <img src="assets/images/works/work-17.jpg" alt="Крупный проект" loading="lazy">
           <div class="gallery-overlay">
             <span class="gallery-tag">Black & Gray · Заживший</span>
             <span class="gallery-title">Крупный проект</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-category="coverup" data-lightbox data-caption="Cover-up · Перекрытие">
-          <img src="assets/images/works/work-18.jpg" alt="Перекрытие">
+        <div class="gallery-item fade-in" data-category="blackwork" data-lightbox data-caption="Black & Gray · Детали #details">
+          <img src="assets/images/works/work-10.jpg" alt="Детали #details" loading="lazy">
           <div class="gallery-overlay">
-            <span class="gallery-tag">Cover-up</span>
-            <span class="gallery-title">Перекрытие</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Узор">
-          <img src="assets/images/works/work-19.jpg" alt="Узор">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Орнаментал</span>
-            <span class="gallery-title">Узор</span>
+            <span class="gallery-tag">Black & Gray</span>
+            <span class="gallery-title">Детали #details</span>
           </div>
         </div>
         <div class="gallery-item fade-in" data-category="realism healed" data-lightbox data-caption="Реализм · Заживший · Зажившая работа">
-          <img src="assets/images/works/work-20.jpg" alt="Зажившая работа">
+          <img src="assets/images/works/work-20.jpg" alt="Зажившая работа" loading="lazy">
           <div class="gallery-overlay">
             <span class="gallery-tag">Реализм · Заживший</span>
             <span class="gallery-title">Зажившая работа</span>
           </div>
         </div>
-
       </div>
 
       <div class="cta-banner fade-in" style="margin-top: 4rem;">
@@ -254,8 +268,30 @@
         <div class="footer-col">
           <h4>Студия</h4>
           <ul>
-            <li><a href="contact.html">Tattoo EXTRA</a></li>
-            <li><a href="contact.html">ул. Ленина, 27</a></li>
+            <li class="nav-theme-item">
+            <span class="nav-theme-label">Тема оформления</span>
+            <button class="theme-switch theme-switch--nav" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
+              <span class="theme-switch-track">
+                <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
+                <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
+                <span class="theme-switch-thumb" aria-hidden="true"></span>
+              </span>
+              <span class="theme-switch-text">Светлая</span>
+            </button>
+          </li>
+          <li><a href="contact.html">Tattoo EXTRA</a></li>
+            <li class="nav-theme-item">
+            <span class="nav-theme-label">Тема оформления</span>
+            <button class="theme-switch theme-switch--nav" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
+              <span class="theme-switch-track">
+                <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
+                <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
+                <span class="theme-switch-thumb" aria-hidden="true"></span>
+              </span>
+              <span class="theme-switch-text">Светлая</span>
+            </button>
+          </li>
+          <li><a href="contact.html">ул. Ленина, 27</a></li>
             <li><a href="tel:+73422101441">+7 (342) 210-14-41</a></li>
           </ul>
         </div>
@@ -279,6 +315,12 @@
     <button class="lightbox-close" aria-label="Закрыть">×</button>
     <img src="" alt="">
     <p class="lightbox-caption"></p>
+  </div>
+
+  
+  <div class="mobile-cta-bar">
+    <a href="portfolio.html" class="btn btn-outline">Работы</a>
+    <a href="contact.html" class="btn btn-primary">Записаться</a>
   </div>
 
   <script src="js/main.js"></script>

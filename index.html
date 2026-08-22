@@ -12,6 +12,7 @@
     (function () {
       var theme = localStorage.getItem("theme") || "light";
       document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.style.colorScheme = theme;
     })();
   </script>
   <link rel="stylesheet" href="css/style.css">
@@ -34,13 +35,28 @@
           <li><a href="services.html">Услуги</a></li>
           <li><a href="portfolio.html">Работы</a></li>
           <li><a href="sketches.html">Эскизы</a></li>
+          <li class="nav-theme-item">
+            <span class="nav-theme-label">Тема оформления</span>
+            <button class="theme-switch theme-switch--nav" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
+              <span class="theme-switch-track">
+                <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
+                <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
+                <span class="theme-switch-thumb" aria-hidden="true"></span>
+              </span>
+              <span class="theme-switch-text">Светлая</span>
+            </button>
+          </li>
           <li><a href="contact.html">Контакты</a></li>
         </ul>
       </nav>
       <div class="header-actions">
-        <button class="theme-toggle" type="button" aria-label="Сменить тему">
-          <span class="theme-icon-light">☀</span>
-          <span class="theme-icon-dark">☾</span>
+        <button class="theme-switch" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
+          <span class="theme-switch-track">
+            <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
+            <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
+            <span class="theme-switch-thumb" aria-hidden="true"></span>
+          </span>
+          <span class="theme-switch-text">Светлая</span>
         </button>
         <a href="contact.html" class="header-cta">Записаться</a>
       </div>
@@ -49,10 +65,10 @@
 
   <section class="hero">
     <div class="hero-bg">
-      <img src="assets/images/works/work-09.jpg" alt="Работа Serge Fomin — Deus vult">
+      <img src="assets/images/instagram/ig-07.jpg" alt="Работа Serge Fomin — Deus vult">
     </div>
     <div class="hero-portrait fade-in">
-      <img src="assets/images/master/sergio-avatar.jpg" alt="Сергей Фомин — тату-мастер">
+      <img src="assets/images/master/sergio-instagram.jpg" alt="Сергей Fomin — тату-мастер">
     </div>
     <div class="container">
       <div class="hero-content fade-in">
@@ -92,7 +108,7 @@
         <h2>Чем я занимаюсь</h2>
         <p>От первого эскиза до зажившей работы — полный цикл создания татуировки вашей мечты.</p>
       </div>
-      <div class="grid-3">
+      <div class="grid-3" data-stagger>
         <article class="card fade-in">
           <div class="card-icon">✦</div>
           <h3>Татуировки</h3>
@@ -123,7 +139,7 @@
         </div>
         <div class="split-content fade-in">
           <div class="master-card">
-            <img src="assets/images/master/sergio-avatar.jpg" alt="Сергей Фомин">
+            <img src="assets/images/master/sergio-instagram.jpg" alt="Сергей Fomin">
             <div class="master-card-info">
               <h3>Сергей Фомин</h3>
               <p>@sergio_fom · Пермь</p>
@@ -159,34 +175,22 @@
         <h2>Избранные работы</h2>
         <p>Свежие и зажившие татуировки. Больше работ — в Instagram и Telegram.</p>
       </div>
-      <div class="gallery-grid">
+      <div class="gallery-grid" data-stagger>
         <div class="gallery-item fade-in" data-lightbox data-caption="Black & Gray · Заживший рукав">
-          <img src="assets/images/works/work-16.jpg" alt="Заживший рукав black and gray">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Black & Gray</span>
-            <span class="gallery-title">Рукав для Артёма</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in" data-lightbox data-caption="Орнаментал · Deus vult">
-          <img src="assets/images/works/work-09.jpg" alt="Орнаментальная тату Deus vult">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Орнаментал</span>
-            <span class="gallery-title">Deus vult</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in" data-lightbox data-caption="Lettering · End of Eternity">
-          <img src="assets/images/works/work-05.jpg" alt="Lettering End of Eternity">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Lettering</span>
-            <span class="gallery-title">End of Eternity</span>
-          </div>
+          <img src="assets/images/works/work-16.jpg" alt="Заживший рукав" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-tag">Black & Gray</span><span class="gallery-title">Рукав для Артёма</span></div>
         </div>
         <div class="gallery-item fade-in" data-lightbox data-caption="Cover-up · Закрас ноги">
-          <img src="assets/images/works/work-15.jpg" alt="Атмосферный закрас ноги">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Cover-up</span>
-            <span class="gallery-title">Закрас ноги</span>
-          </div>
+          <img src="assets/images/instagram/ig-08.jpg" alt="Закрас ноги" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-tag">Cover-up</span><span class="gallery-title">Закрас ноги</span></div>
+        </div>
+        <div class="gallery-item fade-in" data-lightbox data-caption="Black & Gray · Киберпанк">
+          <img src="assets/images/instagram/ig-11.jpg" alt="Киберпанк" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-tag">Black & Gray</span><span class="gallery-title">Киберпанк</span></div>
+        </div>
+        <div class="gallery-item fade-in" data-lightbox data-caption="Black & Gray · Масштабный проект">
+          <img src="assets/images/instagram/ig-09.jpg" alt="Масштабный проект" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-tag">Black & Gray</span><span class="gallery-title">Масштабный проект</span></div>
         </div>
       </div>
       <div style="text-align: center; margin-top: 2.5rem;">
@@ -202,7 +206,7 @@
         <h2>Библиотека эскизов</h2>
         <p>Готовые эскизы для татуировки или индивидуальная разработка под вашу идею.</p>
       </div>
-      <div class="grid-4">
+      <div class="grid-4" data-stagger>
         <article class="sketch-card fade-in">
           <div class="sketch-card-image">
             <img src="assets/images/sketches/sketch-01.jpg" alt="Эскиз орнамент">
@@ -282,8 +286,30 @@
         <div class="footer-col">
           <h4>Студия</h4>
           <ul>
-            <li><a href="contact.html">Tattoo EXTRA</a></li>
-            <li><a href="contact.html">ул. Ленина, 27</a></li>
+            <li class="nav-theme-item">
+            <span class="nav-theme-label">Тема оформления</span>
+            <button class="theme-switch theme-switch--nav" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
+              <span class="theme-switch-track">
+                <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
+                <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
+                <span class="theme-switch-thumb" aria-hidden="true"></span>
+              </span>
+              <span class="theme-switch-text">Светлая</span>
+            </button>
+          </li>
+          <li><a href="contact.html">Tattoo EXTRA</a></li>
+            <li class="nav-theme-item">
+            <span class="nav-theme-label">Тема оформления</span>
+            <button class="theme-switch theme-switch--nav" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
+              <span class="theme-switch-track">
+                <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
+                <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
+                <span class="theme-switch-thumb" aria-hidden="true"></span>
+              </span>
+              <span class="theme-switch-text">Светлая</span>
+            </button>
+          </li>
+          <li><a href="contact.html">ул. Ленина, 27</a></li>
             <li><a href="tel:+73422101441">+7 (342) 210-14-41</a></li>
           </ul>
         </div>
@@ -307,6 +333,12 @@
     <button class="lightbox-close" aria-label="Закрыть">×</button>
     <img src="" alt="">
     <p class="lightbox-caption"></p>
+  </div>
+
+  
+  <div class="mobile-cta-bar">
+    <a href="portfolio.html" class="btn btn-outline">Работы</a>
+    <a href="contact.html" class="btn btn-primary">Записаться</a>
   </div>
 
   <script src="js/main.js"></script>
