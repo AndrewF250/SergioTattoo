@@ -7,7 +7,13 @@
   <title>Сергей Фомин — Тату-мастер | Пермь</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+    (function () {
+      var theme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,17 +37,27 @@
           <li><a href="contact.html">Контакты</a></li>
         </ul>
       </nav>
-      <a href="contact.html" class="header-cta">Записаться</a>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Сменить тему">
+          <span class="theme-icon-light">☀</span>
+          <span class="theme-icon-dark">☾</span>
+        </button>
+        <a href="contact.html" class="header-cta">Записаться</a>
+      </div>
     </div>
   </header>
 
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bc9b4?w=1920&q=80" alt="Татуировка в процессе">
+      <img src="assets/images/works/work-09.jpg" alt="Работа Serge Fomin — Deus vult">
+    </div>
+    <div class="hero-portrait fade-in">
+      <img src="assets/images/master/sergio-avatar.jpg" alt="Сергей Фомин — тату-мастер">
     </div>
     <div class="container">
       <div class="hero-content fade-in">
         <div class="hero-badge">Пермь · Tattoo EXTRA</div>
+        <p class="calligraphy">Art on skin</p>
         <h1>Искусство на <em>коже</em></h1>
         <p class="hero-text">
           Сергей Фомин — профессиональный тату-мастер с персональным подходом к каждому клиенту.
@@ -103,9 +119,16 @@
     <div class="container">
       <div class="split-section">
         <div class="split-image fade-in">
-          <img src="https://images.unsplash.com/photo-1611501275019-899b78365de5?w=800&q=80" alt="Сергей Фомин за работой">
+          <img src="assets/images/studio/studio-01.jpg" alt="Сергей Фомин за работой">
         </div>
         <div class="split-content fade-in">
+          <div class="master-card">
+            <img src="assets/images/master/sergio-avatar.jpg" alt="Сергей Фомин">
+            <div class="master-card-info">
+              <h3>Сергей Фомин</h3>
+              <p>@sergio_fom · Пермь</p>
+            </div>
+          </div>
           <span class="section-label">О мастере</span>
           <h2>Качество, детализация, любовь к делу</h2>
           <p style="color: var(--text-muted); margin-top: 1rem;">
@@ -117,7 +140,13 @@
             «Как бы ни складывались обстоятельства, ваша кожа — холст бесконечных возможностей.
             Наносите только те сюжеты, которые радуют вас.»
           </blockquote>
-          <a href="about.html" class="btn btn-primary">Узнать больше</a>
+          <div class="style-tags">
+            <span class="style-tag">Орнаментал</span>
+            <span class="style-tag">Реализм</span>
+            <span class="style-tag">Lettering</span>
+            <span class="style-tag">Cover-up</span>
+          </div>
+          <a href="about.html" class="btn btn-primary" style="margin-top: 1.5rem;">Узнать больше</a>
         </div>
       </div>
     </div>
@@ -131,32 +160,32 @@
         <p>Свежие и зажившие татуировки. Больше работ — в Instagram и Telegram.</p>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item fade-in" data-lightbox data-caption="Рукав · Black & Gray">
-          <img src="https://images.unsplash.com/photo-1562962230-16e4523f36e6?w=600&q=80" alt="Рукав black and gray">
+        <div class="gallery-item fade-in" data-lightbox data-caption="Black & Gray · Заживший рукав">
+          <img src="assets/images/works/work-16.jpg" alt="Заживший рукав black and gray">
           <div class="gallery-overlay">
             <span class="gallery-tag">Black & Gray</span>
-            <span class="gallery-title">Рукав</span>
+            <span class="gallery-title">Рукав для Артёма</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-lightbox data-caption="Орнаментал · Детализация">
-          <img src="https://images.unsplash.com/photo-1590246814883-4842a0c1d0b0?w=600&q=80" alt="Орнаментальная татуировка">
+        <div class="gallery-item fade-in" data-lightbox data-caption="Орнаментал · Deus vult">
+          <img src="assets/images/works/work-09.jpg" alt="Орнаментальная тату Deus vult">
           <div class="gallery-overlay">
             <span class="gallery-tag">Орнаментал</span>
-            <span class="gallery-title">Экстремальная детализация</span>
+            <span class="gallery-title">Deus vult</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-lightbox data-caption="Леттеринг · Имена">
-          <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bc9b4?w=600&q=80" alt="Леттеринг">
+        <div class="gallery-item fade-in" data-lightbox data-caption="Lettering · End of Eternity">
+          <img src="assets/images/works/work-05.jpg" alt="Lettering End of Eternity">
           <div class="gallery-overlay">
             <span class="gallery-tag">Lettering</span>
-            <span class="gallery-title">Именные надписи</span>
+            <span class="gallery-title">End of Eternity</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-lightbox data-caption="Закрас · Cover-up">
-          <img src="https://images.unsplash.com/photo-1611501275019-899b78365de5?w=600&q=80" alt="Закрас ноги">
+        <div class="gallery-item fade-in" data-lightbox data-caption="Cover-up · Закрас ноги">
+          <img src="assets/images/works/work-15.jpg" alt="Атмосферный закрас ноги">
           <div class="gallery-overlay">
             <span class="gallery-tag">Cover-up</span>
-            <span class="gallery-title">Атмосферный закрас</span>
+            <span class="gallery-title">Закрас ноги</span>
           </div>
         </div>
       </div>
@@ -176,7 +205,7 @@
       <div class="grid-4">
         <article class="sketch-card fade-in">
           <div class="sketch-card-image">
-            <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=400&q=80" alt="Эскиз орнамент">
+            <img src="assets/images/sketches/sketch-01.jpg" alt="Эскиз орнамент">
           </div>
           <div class="sketch-card-body">
             <span class="sketch-status available">Доступен</span>
@@ -186,7 +215,7 @@
         </article>
         <article class="sketch-card fade-in">
           <div class="sketch-card-image">
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&q=80" alt="Эскиз реализм">
+            <img src="assets/images/sketches/sketch-02.jpg" alt="Эскиз реализм">
           </div>
           <div class="sketch-card-body">
             <span class="sketch-status available">Доступен</span>
@@ -196,7 +225,7 @@
         </article>
         <article class="sketch-card fade-in">
           <div class="sketch-card-image">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Цветочный браслет">
+            <img src="assets/images/sketches/sketch-03.jpg" alt="Цветочный браслет">
           </div>
           <div class="sketch-card-body">
             <span class="sketch-status available">Доступен</span>
@@ -206,7 +235,7 @@
         </article>
         <article class="sketch-card fade-in">
           <div class="sketch-card-image">
-            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&q=80" alt="Индивидуальный эскиз">
+            <img src="assets/images/sketches/sketch-04.jpg" alt="Индивидуальный эскиз">
           </div>
           <div class="sketch-card-body">
             <span class="sketch-status custom">Под заказ</span>

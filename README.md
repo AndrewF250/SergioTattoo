@@ -44,6 +44,6 @@ python3 -m http.server 8080
 - Шрифты: Cormorant Garamond + Manrope (Google Fonts)
 - Адаптивная вёрстка, тёмная тема
 
-## Примечание
+## Изображения
 
-Изображения в галерее — placeholder'ы (Unsplash). Для продакшена замените их на реальные фото работ из Instagram/Telegram.
+Фото работ и аватар мастера загружены из Telegram-канала [@sergio_fom_tattoos](https://t.me/sergio_fom_tattoos) и хранятся локально в `assets/images/`.

@@ -7,7 +7,13 @@
   <title>О мастере — Сергей Фомин</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+    (function () {
+      var theme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,7 +37,13 @@
           <li><a href="contact.html">Контакты</a></li>
         </ul>
       </nav>
-      <a href="contact.html" class="header-cta">Записаться</a>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Сменить тему">
+          <span class="theme-icon-light">☀</span>
+          <span class="theme-icon-dark">☾</span>
+        </button>
+        <a href="contact.html" class="header-cta">Записаться</a>
+      </div>
     </div>
   </header>
 
@@ -40,6 +52,7 @@
       <nav class="breadcrumb">
         <a href="index.html">Главная</a> / <span>О мастере</span>
       </nav>
+      <p class="calligraphy-sm">Serge Fomin</p>
       <h1>О мастере</h1>
       <p>Татуировка — это не просто рисунок на коже. Это история, которую вы носите с собой навсегда.</p>
     </div>
@@ -49,7 +62,7 @@
     <div class="container">
       <div class="split-section">
         <div class="split-image fade-in">
-          <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bc9b4?w=800&q=80" alt="Сергей Фомин — тату-мастер">
+          <img src="assets/images/master/sergio-avatar.jpg" alt="Сергей Фомин — тату-мастер">
         </div>
         <div class="split-content fade-in">
           <span class="section-label">Сергей Фомин</span>

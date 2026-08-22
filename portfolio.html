@@ -7,7 +7,13 @@
   <title>Работы — Сергей Фомин</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+    (function () {
+      var theme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,7 +37,13 @@
           <li><a href="contact.html">Контакты</a></li>
         </ul>
       </nav>
-      <a href="contact.html" class="header-cta">Записаться</a>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Сменить тему">
+          <span class="theme-icon-light">☀</span>
+          <span class="theme-icon-dark">☾</span>
+        </button>
+        <a href="contact.html" class="header-cta">Записаться</a>
+      </div>
     </div>
   </header>
 
@@ -40,6 +52,7 @@
       <nav class="breadcrumb">
         <a href="index.html">Главная</a> / <span>Работы</span>
       </nav>
+      <p class="calligraphy-sm">Portfolio</p>
       <h1>Портфолио</h1>
       <p>Свежие и зажившие работы. Актуальное портфолио — в Instagram и Telegram-канале.</p>
     </div>
@@ -57,70 +70,148 @@
         <button class="filter-tab" data-filter="healed">Зажившие</button>
       </div>
 
-      <div class="gallery-grid">
-        <div class="gallery-item fade-in" data-category="blackwork healed" data-lightbox data-caption="Рукав · Black & Gray · Заживший">
-          <img src="https://images.unsplash.com/photo-1562962230-16e4523f36e6?w=600&q=80" alt="Рукав black and gray">
+      <div class="gallery-grid gallery-masonry">
+        <div class="gallery-item fade-in" data-category="blackwork healed" data-lightbox data-caption="Рукав · Black & Gray · Заживший рукав для Артёма">
+          <img src="assets/images/works/work-16.jpg" alt="Заживший рукав для Артёма">
           <div class="gallery-overlay">
-            <span class="gallery-tag">Black & Gray · Заживший</span>
-            <span class="gallery-title">Рукав для Артёма</span>
+            <span class="gallery-tag">Рукав · Black & Gray</span>
+            <span class="gallery-title">Заживший рукав для Артёма</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Экстремальная детализация">
-          <img src="https://images.unsplash.com/photo-1590246814883-4842a0c1d0b0?w=600&q=80" alt="Орнаментальная работа">
+        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Deus vult">
+          <img src="assets/images/works/work-09.jpg" alt="Deus vult">
           <div class="gallery-overlay">
             <span class="gallery-tag">Орнаментал</span>
-            <span class="gallery-title">Детализация</span>
+            <span class="gallery-title">Deus vult</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-category="lettering healed" data-lightbox data-caption="Lettering · End of Eternity">
-          <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bc9b4?w=600&q=80" alt="Lettering">
+        <div class="gallery-item fade-in" data-category="lettering" data-lightbox data-caption="Lettering · End of Eternity">
+          <img src="assets/images/works/work-05.jpg" alt="End of Eternity">
           <div class="gallery-overlay">
-            <span class="gallery-tag">Lettering · Заживший</span>
+            <span class="gallery-tag">Lettering</span>
             <span class="gallery-title">End of Eternity</span>
           </div>
         </div>
         <div class="gallery-item fade-in" data-category="coverup" data-lightbox data-caption="Cover-up · Атмосферный закрас ноги">
-          <img src="https://images.unsplash.com/photo-1611501275019-899b78365de5?w=600&q=80" alt="Закрас ноги">
+          <img src="assets/images/works/work-15.jpg" alt="Атмосферный закрас ноги">
           <div class="gallery-overlay">
             <span class="gallery-tag">Cover-up</span>
-            <span class="gallery-title">Закрас ноги</span>
+            <span class="gallery-title">Атмосферный закрас ноги</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-category="realism" data-lightbox data-caption="Реализм · Портрет">
-          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=80" alt="Реалистичный портрет">
+        <div class="gallery-item fade-in" data-category="realism" data-lightbox data-caption="Реализм · Портретная работа">
+          <img src="assets/images/works/work-03.jpg" alt="Портретная работа">
           <div class="gallery-overlay">
             <span class="gallery-tag">Реализм</span>
-            <span class="gallery-title">Портрет</span>
+            <span class="gallery-title">Портретная работа</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-category="ornamental healed" data-lightbox data-caption="Орнаментал · Deus vult">
-          <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&q=80" alt="Deus vult">
+        <div class="gallery-item fade-in" data-category="ornamental healed" data-lightbox data-caption="Орнаментал · Заживший · Детализация">
+          <img src="assets/images/works/work-07.jpg" alt="Детализация">
           <div class="gallery-overlay">
             <span class="gallery-tag">Орнаментал · Заживший</span>
-            <span class="gallery-title">Deus vult</span>
+            <span class="gallery-title">Детализация</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-category="blackwork" data-lightbox data-caption="Black & Gray · Детали">
-          <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=80" alt="Детали black and gray">
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Black & Gray</span>
-            <span class="gallery-title">Детали</span>
-          </div>
-        </div>
-        <div class="gallery-item fade-in" data-category="lettering" data-lightbox data-caption="Lettering · Имена детей">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Именные надписи">
+        <div class="gallery-item fade-in" data-category="lettering" data-lightbox data-caption="Lettering · Именные надписи">
+          <img src="assets/images/works/work-12.jpg" alt="Именные надписи">
           <div class="gallery-overlay">
             <span class="gallery-tag">Lettering</span>
-            <span class="gallery-title">Damien & Taissa</span>
+            <span class="gallery-title">Именные надписи</span>
           </div>
         </div>
-        <div class="gallery-item fade-in" data-category="realism healed" data-lightbox data-caption="Реализм · Зажившая работа">
-          <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bc9b4?w=600&q=80" alt="Заживший реализм">
+        <div class="gallery-item fade-in" data-category="realism healed" data-lightbox data-caption="Реализм · Заживший · Фотorealism">
+          <img src="assets/images/works/work-02.jpg" alt="Фотorealism">
           <div class="gallery-overlay">
             <span class="gallery-tag">Реализм · Заживший</span>
             <span class="gallery-title">Фотorealism</span>
           </div>
         </div>
+        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Геометрия">
+          <img src="assets/images/works/work-01.jpg" alt="Геометрия">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Орнаментал</span>
+            <span class="gallery-title">Геометрия</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="blackwork" data-lightbox data-caption="Black & Gray · Конtrast и тени">
+          <img src="assets/images/works/work-04.jpg" alt="Конtrast и тени">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Black & Gray</span>
+            <span class="gallery-title">Конtrast и тени</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Linework">
+          <img src="assets/images/works/work-06.jpg" alt="Linework">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Орнаментал</span>
+            <span class="gallery-title">Linework</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="lettering healed" data-lightbox data-caption="Lettering · Заживший · Damien & Taissa">
+          <img src="assets/images/works/work-08.jpg" alt="Damien & Taissa">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Lettering · Заживший</span>
+            <span class="gallery-title">Damien & Taissa</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="blackwork" data-lightbox data-caption="Black & Gray · Детали #details">
+          <img src="assets/images/works/work-10.jpg" alt="Детали #details">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Black & Gray</span>
+            <span class="gallery-title">Детали #details</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="realism" data-lightbox data-caption="Реализм · Объём и свет">
+          <img src="assets/images/works/work-11.jpg" alt="Объём и свет">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Реализм</span>
+            <span class="gallery-title">Объём и свет</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Микродетали">
+          <img src="assets/images/works/work-13.jpg" alt="Микродетали">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Орнаментал</span>
+            <span class="gallery-title">Микродетали</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="lettering" data-lightbox data-caption="Lettering · Каллиграфия">
+          <img src="assets/images/works/work-14.jpg" alt="Каллиграфия">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Lettering</span>
+            <span class="gallery-title">Каллиграфия</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="blackwork healed" data-lightbox data-caption="Black & Gray · Заживший · Крупный проект">
+          <img src="assets/images/works/work-17.jpg" alt="Крупный проект">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Black & Gray · Заживший</span>
+            <span class="gallery-title">Крупный проект</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="coverup" data-lightbox data-caption="Cover-up · Перекрытие">
+          <img src="assets/images/works/work-18.jpg" alt="Перекрытие">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Cover-up</span>
+            <span class="gallery-title">Перекрытие</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="ornamental" data-lightbox data-caption="Орнаментал · Узор">
+          <img src="assets/images/works/work-19.jpg" alt="Узор">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Орнаментал</span>
+            <span class="gallery-title">Узор</span>
+          </div>
+        </div>
+        <div class="gallery-item fade-in" data-category="realism healed" data-lightbox data-caption="Реализм · Заживший · Зажившая работа">
+          <img src="assets/images/works/work-20.jpg" alt="Зажившая работа">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Реализм · Заживший</span>
+            <span class="gallery-title">Зажившая работа</span>
+          </div>
+        </div>
+
       </div>
 
       <div class="cta-banner fade-in" style="margin-top: 4rem;">

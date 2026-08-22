@@ -1,10 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
+  initTheme();
   initMobileNav();
   initScrollAnimations();
   initGalleryFilter();
   initLightbox();
   initContactForm();
 });
+
+function initTheme() {
+  const toggle = document.querySelector(".theme-toggle");
+  const saved = localStorage.getItem("theme") || "light";
+  document.documentElement.setAttribute("data-theme", saved);
+
+  if (!toggle) return;
+
+  toggle.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") || "light";
+    const next = current === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  });
+}
 
 function initMobileNav() {
   const toggle = document.querySelector(".nav-toggle");

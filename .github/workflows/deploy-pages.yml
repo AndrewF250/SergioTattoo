@@ -19,7 +19,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html about.html contact.html services.html portfolio.html sketches.html _site/
-          cp -r css js _site/
+          cp -r css js assets _site/
           touch _site/.nojekyll
 
       - name: Deploy to gh-pages branch
