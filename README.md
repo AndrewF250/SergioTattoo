@@ -46,4 +46,7 @@ python3 -m http.server 8080
 
 ## Изображения
 
-Фото работ и аватар мастера загружены из Telegram-канала [@sergio_fom_tattoos](https://t.me/sergio_fom_tattoos) и хранятся локально в `assets/images/`.
+Фото работ загружены из официальных соцсетей мастера:
+- **Instagram** [@sergio_fom](https://www.instagram.com/sergio_fom) → `assets/images/instagram/`
+- **Telegram** [@sergio_fom_tattoos](https://t.me/sergio_fom_tattoos) → `assets/images/works/`
+- **Профиль мастера** → `assets/images/master/sergio-instagram.jpg`
