@@ -7,7 +7,13 @@
   <title>Услуги — Сергей Фомин</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+    (function () {
+      var theme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,7 +37,13 @@
           <li><a href="contact.html">Контакты</a></li>
         </ul>
       </nav>
-      <a href="contact.html" class="header-cta">Записаться</a>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Сменить тему">
+          <span class="theme-icon-light">☀</span>
+          <span class="theme-icon-dark">☾</span>
+        </button>
+        <a href="contact.html" class="header-cta">Записаться</a>
+      </div>
     </div>
   </header>
 
@@ -40,6 +52,7 @@
       <nav class="breadcrumb">
         <a href="index.html">Главная</a> / <span>Услуги</span>
       </nav>
+      <p class="calligraphy-sm">Tattoo · Laser · Sketch</p>
       <h1>Услуги</h1>
       <p>Полный спектр услуг — от разработки эскиза до лазерного удаления. Каждый этап с персональным подходом.</p>
     </div>
@@ -50,7 +63,7 @@
       <div class="grid-2">
         <article class="service-card fade-in">
           <div class="service-card-image">
-            <img src="https://images.unsplash.com/photo-1562962230-16e4523f36e6?w=700&q=80" alt="Татуировки">
+            <img src="assets/images/works/work-09.jpg" alt="Татуировки">
           </div>
           <div class="service-card-body">
             <h3>Татуировки</h3>
@@ -63,7 +76,7 @@
         </article>
         <article class="service-card fade-in">
           <div class="service-card-image">
-            <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=700&q=80" alt="Авторские эскизы">
+            <img src="assets/images/sketches/sketch-01.jpg" alt="Авторские эскизы">
           </div>
           <div class="service-card-body">
             <h3>Авторские эскизы</h3>
@@ -76,7 +89,7 @@
         </article>
         <article class="service-card fade-in">
           <div class="service-card-image">
-            <img src="https://images.unsplash.com/photo-1611501275019-899b78365de5?w=700&q=80" alt="Закрасы и cover-up">
+            <img src="assets/images/works/work-15.jpg" alt="Закрасы и cover-up">
           </div>
           <div class="service-card-body">
             <h3>Закрасы и Cover-up</h3>
@@ -89,7 +102,7 @@
         </article>
         <article class="service-card fade-in">
           <div class="service-card-image">
-            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700&q=80" alt="Лазерное удаление">
+            <img src="assets/images/studio/studio-02.jpg" alt="Лазерное удаление">
           </div>
           <div class="service-card-body">
             <h3>Лазерное удаление</h3>

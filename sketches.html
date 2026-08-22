@@ -7,7 +7,13 @@
   <title>Эскизы — Сергей Фомин</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+    (function () {
+      var theme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,7 +37,13 @@
           <li><a href="contact.html">Контакты</a></li>
         </ul>
       </nav>
-      <a href="contact.html" class="header-cta">Записаться</a>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Сменить тему">
+          <span class="theme-icon-light">☀</span>
+          <span class="theme-icon-dark">☾</span>
+        </button>
+        <a href="contact.html" class="header-cta">Записаться</a>
+      </div>
     </div>
   </header>
 
@@ -40,6 +52,7 @@
       <nav class="breadcrumb">
         <a href="index.html">Главная</a> / <span>Эскизы</span>
       </nav>
+      <p class="calligraphy-sm">Sketches & Lettering</p>
       <h1>Библиотека эскизов</h1>
       <p>Готовые эскизы, доступные для нанесения, или индивидуальная разработка под вашу уникальную идею.</p>
     </div>
@@ -59,7 +72,7 @@
       <div class="grid-4">
         <article class="sketch-card fade-in" data-category="available ornamental">
           <div class="sketch-card-image">
-            <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=400&q=80" alt="Орнаментальный mandala">
+            <img src="assets/images/sketches/sketch-01.jpg" alt="Орнаментальный mandala">
           </div>
           <div class="sketch-card-body">
             <span class="sketch-status available">Доступен</span>
@@ -70,7 +83,7 @@
 
         <article class="sketch-card fade-in" data-category="available realism">
           <div class="sketch-card-image">
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&q=80" alt="Реалистичный портрет">
+            <img src="assets/images/sketches/sketch-02.jpg" alt="Реалистичный портрет">
           </div>
           <div class="sketch-card-body">
             <span class="sketch-status available">Доступен</span>
@@ -81,7 +94,7 @@
 
         <article class="sketch-card fade-in" data-category="available ornamental">
           <div class="sketch-card-image">
-            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&q=80" alt="Геометрический орнамент">
+            <img src="assets/images/works/work-13.jpg" alt="Геометрический орнамент">
           </div>
           <div class="sketch-card-body">
             <span class="sketch-status available">Доступен</span>
@@ -92,7 +105,7 @@
 
         <article class="sketch-card fade-in" data-category="available ornamental">
           <div class="sketch-card-image">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Цветочный браслет">
+            <img src="assets/images/sketches/sketch-03.jpg" alt="Цветочный браслет">
           </div>
           <div class="sketch-card-body">
             <span class="sketch-status available">Доступен</span>
@@ -103,7 +116,7 @@
 
         <article class="sketch-card fade-in" data-category="available lettering">
           <div class="sketch-card-image">
-            <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bc9b4?w=400&q=80" alt="Каллиграфическая надпись">
+            <img src="assets/images/works/work-14.jpg" alt="Каллиграфическая надпись">
           </div>
           <div class="sketch-card-body">
             <span class="sketch-status available">Доступен</span>
@@ -114,7 +127,7 @@
 
         <article class="sketch-card fade-in" data-category="available realism">
           <div class="sketch-card-image">
-            <img src="https://images.unsplash.com/photo-1562962230-16e4523f36e6?w=400&q=80" alt="Животное в реализме">
+            <img src="assets/images/works/work-03.jpg" alt="Животное в реализме">
           </div>
           <div class="sketch-card-body">
             <span class="sketch-status available">Доступен</span>
@@ -125,7 +138,7 @@
 
         <article class="sketch-card fade-in" data-category="available ornamental">
           <div class="sketch-card-image">
-            <img src="https://images.unsplash.com/photo-1590246814883-4842a0c1d0b0?w=400&q=80" alt="Декоративный узор">
+            <img src="assets/images/works/work-06.jpg" alt="Декоративный узор">
           </div>
           <div class="sketch-card-body">
             <span class="sketch-status available">Доступен</span>
@@ -136,7 +149,7 @@
 
         <article class="sketch-card fade-in" data-category="custom">
           <div class="sketch-card-image">
-            <img src="https://images.unsplash.com/photo-1611501275019-899b78365de5?w=400&q=80" alt="Индивидуальный эскиз">
+            <img src="assets/images/sketches/sketch-05.jpg" alt="Индивидуальный эскиз">
           </div>
           <div class="sketch-card-body">
             <span class="sketch-status custom">Под заказ</span>
@@ -168,7 +181,7 @@
           <a href="contact.html" class="btn btn-primary" style="margin-top: 2rem;">Заказать эскиз</a>
         </div>
         <div class="split-image fade-in">
-          <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&q=80" alt="Процесс создания эскиза">
+          <img src="assets/images/works/work-10.jpg" alt="Процесс создания эскиза">
         </div>
       </div>
     </div>
