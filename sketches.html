@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -7,23 +7,26 @@
   <title>Эскизы — Сергей Фомин</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-    (function () {
-      var theme = localStorage.getItem("theme") || "light";
-      document.documentElement.setAttribute("data-theme", theme);
-      document.documentElement.style.colorScheme = theme;
-    })();
-  </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
+
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
 
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="logo">
-        <span class="logo-name">Serge Fomin</span>
-        <span class="logo-tagline">Tattoo Artist · Perm</span>
+        <span class="logo-icon">🖋️</span>
+        <div>
+          <span class="logo-name">Serge Fomin</span>
+          <span class="logo-tagline">Tattoo Artist · Perm</span>
+        </div>
       </a>
       <nav>
         <button class="nav-toggle" aria-label="Меню">
@@ -35,30 +38,14 @@
           <li><a href="services.html">Услуги</a></li>
           <li><a href="portfolio.html">Работы</a></li>
           <li><a href="sketches.html" class="active">Эскизы</a></li>
-          <li class="nav-theme-item">
-            <span class="nav-theme-label">Тема оформления</span>
-            <button class="theme-switch theme-switch--nav" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
-              <span class="theme-switch-track">
-                <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
-                <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
-                <span class="theme-switch-thumb" aria-hidden="true"></span>
-              </span>
-              <span class="theme-switch-text">Светлая</span>
-            </button>
-          </li>
           <li><a href="contact.html">Контакты</a></li>
         </ul>
       </nav>
       <div class="header-actions">
-        <button class="theme-switch" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
-          <span class="theme-switch-track">
-            <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
-            <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
-            <span class="theme-switch-thumb" aria-hidden="true"></span>
-          </span>
-          <span class="theme-switch-text">Светлая</span>
-        </button>
-        <a href="contact.html" class="header-cta">Записаться</a>
+        <a href="contact.html" class="header-cta">
+          Записаться
+          <i data-lucide="arrow-right" class="arrow-icon" style="width:16px;height:16px"></i>
+        </a>
       </div>
     </div>
   </header>
@@ -68,8 +55,7 @@
       <nav class="breadcrumb">
         <a href="index.html">Главная</a> / <span>Эскизы</span>
       </nav>
-      <p class="calligraphy-sm">Sketches & Lettering</p>
-      <h1>Библиотека эскизов</h1>
+      <p <h1>Библиотека эскизов</h1>
       <p>Готовые эскизы, доступные для нанесения, или индивидуальная разработка под вашу уникальную идею.</p>
     </div>
   </section>
@@ -177,18 +163,18 @@
     </div>
   </section>
 
-  <section class="section" style="background: var(--bg-elevated);">
+  <section class="section" style="background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);">
     <div class="container">
       <div class="split-section">
         <div class="split-content fade-in">
-          <span class="section-label">Индивидуальная разработка</span>
+          <span class="section-badge">Индивидуальная разработка</span>
           <h2>Эскиз под заказ</h2>
           <p style="color: var(--text-muted); margin-top: 1rem;">
             Не нашли подходящий эскиз в библиотеке? Я создам уникальный рисунок специально для вас.
             Расскажите о своей идее, покажите референсы — и мы вместе доведём эскиз до идеала
             перед сеансом.
           </p>
-          <ul class="feature-list">
+          <ul class="check-list">
             <li>Бесплатная первичная консультация по идее</li>
             <li>Несколько вариантов на выбор</li>
             <li>Адаптация под анатомию и существующие тату</li>
@@ -208,10 +194,13 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="logo">
-            <span class="logo-name">Serge Fomin</span>
-            <span class="logo-tagline">Tattoo Artist · Perm</span>
+            <span class="logo-icon">🖋️</span>
+            <div>
+              <span class="logo-name">Serge Fomin</span>
+              <span class="logo-tagline">Tattoo Artist · Perm</span>
+            </div>
           </a>
-          <p>Профессиональный тату-мастер. Индивидуальный подход, авторские эскизы, работы высочайшего качества.</p>
+          <p>Профессиональный тату-мастер. Индивидуальный подход, авторские эскизы, работы высочайшего качества. ✨</p>
         </div>
         <div class="footer-col">
           <h4>Навигация</h4>
@@ -225,30 +214,8 @@
         <div class="footer-col">
           <h4>Студия</h4>
           <ul>
-            <li class="nav-theme-item">
-            <span class="nav-theme-label">Тема оформления</span>
-            <button class="theme-switch theme-switch--nav" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
-              <span class="theme-switch-track">
-                <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
-                <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
-                <span class="theme-switch-thumb" aria-hidden="true"></span>
-              </span>
-              <span class="theme-switch-text">Светлая</span>
-            </button>
-          </li>
-          <li><a href="contact.html">Tattoo EXTRA</a></li>
-            <li class="nav-theme-item">
-            <span class="nav-theme-label">Тема оформления</span>
-            <button class="theme-switch theme-switch--nav" type="button" role="switch" aria-label="Переключить тему" aria-checked="false">
-              <span class="theme-switch-track">
-                <span class="theme-switch-icon theme-switch-icon-light" aria-hidden="true">☀</span>
-                <span class="theme-switch-icon theme-switch-icon-dark" aria-hidden="true">☾</span>
-                <span class="theme-switch-thumb" aria-hidden="true"></span>
-              </span>
-              <span class="theme-switch-text">Светлая</span>
-            </button>
-          </li>
-          <li><a href="contact.html">ул. Ленина, 27</a></li>
+            <li><a href="contact.html">Tattoo EXTRA</a></li>
+            <li><a href="contact.html">ул. Ленина, 27</a></li>
             <li><a href="tel:+73422101441">+7 (342) 210-14-41</a></li>
           </ul>
         </div>
@@ -263,7 +230,7 @@
       </div>
       <div class="footer-bottom">
         <span>© 2026 Сергей Фомин. Все права защищены.</span>
-        <span>Пермь, Россия</span>
+        <span>Пермь, Россия 🇷🇺</span>
       </div>
     </div>
   </footer>

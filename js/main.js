@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  initTheme();
+  if (typeof lucide !== "undefined") lucide.createIcons();
   initMobileNav();
   initHeaderScroll();
   initScrollAnimations();
@@ -7,45 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
   initGalleryFilter();
   initLightbox();
   initContactForm();
-  initParallax();
 });
-
-function initTheme() {
-  const saved = localStorage.getItem("theme") || "light";
-  applyTheme(saved);
-
-  document.querySelectorAll(".theme-switch").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const current = document.documentElement.getAttribute("data-theme") || "light";
-      const next = current === "light" ? "dark" : "light";
-      applyTheme(next);
-      localStorage.setItem("theme", next);
-    });
-  });
-}
-
-function applyTheme(theme) {
-  const root = document.documentElement;
-  root.setAttribute("data-theme", theme);
-  root.style.colorScheme = theme;
-
-  document.querySelectorAll(".theme-switch").forEach((btn) => {
-    const isDark = theme === "dark";
-    btn.setAttribute("aria-checked", isDark ? "true" : "false");
-    btn.classList.toggle("is-dark", isDark);
-
-    const label = btn.querySelector(".theme-switch-text");
-    if (label) {
-      label.textContent = isDark ? "Тёмная" : "Светлая";
-    }
-  });
-}
 
 function initMobileNav() {
   const toggle = document.querySelector(".nav-toggle");
   const navList = document.querySelector(".nav-list");
   const header = document.querySelector(".site-header");
-
   if (!toggle || !navList) return;
 
   const closeNav = () => {
@@ -60,17 +27,9 @@ function initMobileNav() {
     document.body.classList.toggle("nav-open", open);
   });
 
-  navList.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", closeNav);
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeNav();
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) closeNav();
-  });
+  navList.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeNav));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeNav(); });
+  window.addEventListener("resize", () => { if (window.innerWidth > 768) closeNav(); });
 
   if (header) {
     document.addEventListener("click", (e) => {
@@ -84,18 +43,13 @@ function initMobileNav() {
 function initHeaderScroll() {
   const header = document.querySelector(".site-header");
   if (!header) return;
-
-  const onScroll = () => {
-    header.classList.toggle("scrolled", window.scrollY > 24);
-  };
-
+  const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 24);
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 }
 
 function initScrollAnimations() {
   const elements = document.querySelectorAll(".fade-in, .reveal");
-
   if (!elements.length) return;
 
   const observer = new IntersectionObserver(
@@ -137,13 +91,11 @@ function initStaggerGroups() {
 function initGalleryFilter() {
   const tabs = document.querySelectorAll(".filter-tab");
   const items = document.querySelectorAll("[data-category]");
-
   if (!tabs.length || !items.length) return;
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       const filter = tab.dataset.filter;
-
       tabs.forEach((t) => t.classList.remove("active"));
       tab.classList.add("active");
 
@@ -152,11 +104,8 @@ function initGalleryFilter() {
         const show = filter === "all" || categories.includes(filter);
         item.style.display = show ? "" : "none";
         if (show) {
-          item.classList.remove("filter-in");
-          requestAnimationFrame(() => {
-            item.classList.add("filter-in");
-            item.style.setProperty("--stagger", `${(index % 6) * 0.05}s`);
-          });
+          item.style.setProperty("--stagger", `${(index % 6) * 0.05}s`);
+          item.classList.add("stagger-item", "visible");
         }
       });
     });
@@ -174,11 +123,10 @@ function initLightbox() {
   document.querySelectorAll("[data-lightbox]").forEach((trigger) => {
     trigger.addEventListener("click", () => {
       const img = trigger.querySelector("img");
-      if (!img) return;
-
+      if (!img || img.style.display === "none") return;
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt;
-      lightboxCaption.textContent = trigger.dataset.caption || img.alt;
+      if (lightboxCaption) lightboxCaption.textContent = trigger.dataset.caption || img.alt;
       lightbox.classList.add("active");
       document.body.style.overflow = "hidden";
     });
@@ -190,12 +138,8 @@ function initLightbox() {
   };
 
   closeBtn.addEventListener("click", close);
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) close();
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") close();
-  });
+  lightbox.addEventListener("click", (e) => { if (e.target === lightbox) close(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
 }
 
 function initContactForm() {
@@ -204,33 +148,14 @@ function initContactForm() {
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-
     const name = form.querySelector('[name="name"]')?.value || "";
     const phone = form.querySelector('[name="phone"]')?.value || "";
     const service = form.querySelector('[name="service"]')?.value || "";
     const message = form.querySelector('[name="message"]')?.value || "";
 
     const text = encodeURIComponent(
-      `Здравствуйте! Меня зовут ${name}.\n` +
-        `Телефон: ${phone}\n` +
-        `Услуга: ${service}\n\n` +
-        `${message}`
+      `Здравствуйте! Меня зовут ${name}.\nТелефон: ${phone}\nУслуга: ${service}\n\n${message}`
     );
-
     window.open(`https://t.me/sergio_fom_tattoos?text=${text}`, "_blank");
   });
-}
-
-function initParallax() {
-  const heroBg = document.querySelector(".hero-bg img");
-  if (!heroBg || window.matchMedia("(max-width: 768px)").matches) return;
-
-  window.addEventListener(
-    "scroll",
-    () => {
-      const offset = window.scrollY * 0.18;
-      heroBg.style.transform = `scale(1.08) translateY(${offset}px)`;
-    },
-    { passive: true }
-  );
 }
