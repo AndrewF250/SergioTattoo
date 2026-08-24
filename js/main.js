@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  if (typeof lucide !== "undefined") lucide.createIcons();
+  if (typeof lucide !== "undefined") {
+    lucide.createIcons({
+      attrs: {
+        "stroke-width": 1.5,
+        fill: "none",
+      },
+    });
+  }
   initMobileNav();
   initHeaderScroll();
   initScrollAnimations();
@@ -11,39 +18,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initMobileNav() {
   const toggle = document.querySelector(".nav-toggle");
-  const navList = document.querySelector(".nav-list");
-  const header = document.querySelector(".site-header");
-  if (!toggle || !navList) return;
+  const drawer = document.querySelector(".nav-drawer");
+  if (!toggle || !drawer) return;
 
   const closeNav = () => {
-    navList.classList.remove("open");
+    drawer.classList.remove("open");
     toggle.classList.remove("active");
+    toggle.setAttribute("aria-expanded", "false");
+    drawer.setAttribute("aria-hidden", "true");
     document.body.classList.remove("nav-open");
   };
 
   toggle.addEventListener("click", () => {
-    const open = navList.classList.toggle("open");
+    const open = drawer.classList.toggle("open");
     toggle.classList.toggle("active", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    drawer.setAttribute("aria-hidden", open ? "false" : "true");
     document.body.classList.toggle("nav-open", open);
   });
 
-  navList.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeNav));
+  drawer.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeNav));
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeNav(); });
   window.addEventListener("resize", () => { if (window.innerWidth > 768) closeNav(); });
-
-  if (header) {
-    document.addEventListener("click", (e) => {
-      if (!navList.classList.contains("open")) return;
-      if (header.contains(e.target)) return;
-      closeNav();
-    });
-  }
 }
 
 function initHeaderScroll() {
   const header = document.querySelector(".site-header");
   if (!header) return;
-  const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 24);
+  const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 8);
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 }
@@ -61,7 +63,7 @@ function initScrollAnimations() {
         }
       });
     },
-    { threshold: 0.08, rootMargin: "0px 0px -30px 0px" }
+    { threshold: 0.08, rootMargin: "0px 0px -24px 0px" }
   );
 
   elements.forEach((el) => observer.observe(el));
@@ -76,13 +78,13 @@ function initStaggerGroups() {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         Array.from(entry.target.children).forEach((child, index) => {
-          child.style.setProperty("--stagger", `${index * 0.08}s`);
+          child.style.setProperty("--stagger", `${index * 0.06}s`);
           child.classList.add("stagger-item", "visible");
         });
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.1 }
   );
 
   groups.forEach((group) => observer.observe(group));
@@ -99,14 +101,10 @@ function initGalleryFilter() {
       tabs.forEach((t) => t.classList.remove("active"));
       tab.classList.add("active");
 
-      items.forEach((item, index) => {
+      items.forEach((item) => {
         const categories = item.dataset.category.split(" ");
         const show = filter === "all" || categories.includes(filter);
         item.style.display = show ? "" : "none";
-        if (show) {
-          item.style.setProperty("--stagger", `${(index % 6) * 0.05}s`);
-          item.classList.add("stagger-item", "visible");
-        }
       });
     });
   });
@@ -123,7 +121,7 @@ function initLightbox() {
   document.querySelectorAll("[data-lightbox]").forEach((trigger) => {
     trigger.addEventListener("click", () => {
       const img = trigger.querySelector("img");
-      if (!img || img.style.display === "none") return;
+      if (!img) return;
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt;
       if (lightboxCaption) lightboxCaption.textContent = trigger.dataset.caption || img.alt;

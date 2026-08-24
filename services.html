@@ -3,146 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Услуги Сергея Фомина: татуировки, авторские эскизы, лазерное удаление, закрасы, консультации. Студия Tattoo EXTRA, Пермь.">
+  <meta name="description" content="Услуги Сергея Фомина: татуировки, авторские эскизы, лазерное удаление, закрасы. Студия Tattoo EXTRA, Пермь.">
   <title>Услуги — Сергей Фомин</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 
-  <div class="bg-orbs" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
-
   <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <span class="logo-icon">🖋️</span>
-        <div>
-          <span class="logo-name">Serge Fomin</span>
-          <span class="logo-tagline">Tattoo Artist · Perm</span>
-        </div>
-      </a>
-      <nav>
-        <button class="nav-toggle" aria-label="Меню">
-          <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="about.html">О мастере</a></li>
-          <li><a href="services.html" class="active">Услуги</a></li>
-          <li><a href="portfolio.html">Работы</a></li>
-          <li><a href="sketches.html">Эскизы</a></li>
-          <li><a href="contact.html">Контакты</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <a href="contact.html" class="header-cta">
-          Записаться
-          <i data-lucide="arrow-right" class="arrow-icon" style="width:16px;height:16px"></i>
-        </a>
-      </div>
+    <div class="header-bar">
+      <button class="nav-toggle" aria-label="Меню" aria-expanded="false">
+        <i data-lucide="menu" class="icon"></i>
+      </button>
+      <a href="index.html" class="logo-pill">Serge Fomin</a>
+      <a href="contact.html" class="btn-ghost btn-ghost--light header-book">Записаться ↗</a>
     </div>
+    <nav class="nav-drawer" aria-hidden="true">
+      <ul class="nav-list">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О мастере</a></li>
+        <li><a href="services.html" class="active">Услуги</a></li>
+        <li><a href="portfolio.html">Работы</a></li>
+        <li><a href="sketches.html">Эскизы</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="page-hero">
+  <section class="page-hero-dark">
     <div class="container fade-in">
-      <nav class="breadcrumb">
-        <a href="index.html">Главная</a> / <span>Услуги</span>
-      </nav>
-      <p <h1>Услуги</h1>
-      <p>Полный спектр услуг — от разработки эскиза до лазерного удаления. Каждый этап с персональным подходом.</p>
+      <nav class="breadcrumb"><a href="index.html">Главная</a> / <span>Услуги</span></nav>
+      <h1>Услуги</h1>
+      <p>Полный спектр — от разработки эскиза до лазерного удаления. Каждый этап с персональным подходом.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="grid-2">
-        <article class="service-card fade-in">
-          <div class="service-card-image">
-            <img src="assets/images/instagram/ig-07.jpg" alt="Татуировки">
-          </div>
-          <div class="service-card-body">
-            <h3>Татуировки</h3>
-            <p>
-              Работаю во всех основных стилях: орнаментал, реализм, black & gray, lettering, цветные работы.
-              Выполняю татуировки любой сложности — от минималистичных символов до масштабных рукавов
-              и комплексных проектов. Каждая работа создаётся с учётом анатомии и вашей истории.
-            </p>
-          </div>
-        </article>
-        <article class="service-card fade-in">
-          <div class="service-card-image">
-            <img src="assets/images/instagram/ig-12.jpg" alt="Авторские эскизы">
-          </div>
-          <div class="service-card-body">
-            <h3>Авторские эскизы</h3>
-            <p>
-              Разрабатываю индивидуальные и эксклюзивные эскизы с нуля. Вы описываете идею — я создаю
-              уникальный рисунок, адаптированный под ваше тело. Также доступна библиотека готовых эскизов,
-              которые можно адаптировать под вас.
-            </p>
-          </div>
-        </article>
-        <article class="service-card fade-in">
-          <div class="service-card-image">
-            <img src="assets/images/instagram/ig-08.jpg" alt="Закрасы и cover-up">
-          </div>
-          <div class="service-card-body">
-            <h3>Закрасы и Cover-up</h3>
-            <p>
-              Перекрытие старых, некачественных или надоевших татуировок. Атмосферные закрасы,
-              интеграция старых работ в новую концепцию — как в случае с рукавом для Артёма,
-              где старая надпись была филигранно вписана в общий дизайн.
-            </p>
-          </div>
-        </article>
-        <article class="service-card fade-in">
-          <div class="service-card-image">
-            <img src="assets/images/instagram/ig-04.jpg" alt="Лазерное удаление">
-          </div>
-          <div class="service-card-body">
-            <h3>Лазерное удаление</h3>
-            <p>
-              Безопасное удаление и осветление татуировок лазером. Если вы нарисовали «не так» —
-              всегда есть шанс исправить, добавить или превратить ошибку в часть великого сюжета.
-              Консультация перед процедурой обязательна.
-            </p>
-          </div>
-        </article>
-      </div>
+      <article class="service-block fade-in">
+        <div class="service-block__image">
+          <img src="assets/images/instagram/ig-07.jpg" alt="Татуировки" loading="lazy">
+        </div>
+        <div>
+          <h3>Татуировки</h3>
+          <p>Орнаментал, реализм, black &amp; gray, lettering, цветные работы. От минималистичных символов до масштабных рукавов и комплексных проектов. Каждая работа — с учётом анатомии и вашей истории.</p>
+        </div>
+      </article>
+      <article class="service-block fade-in">
+        <div class="service-block__image">
+          <img src="assets/images/instagram/ig-12.jpg" alt="Авторские эскизы" loading="lazy">
+        </div>
+        <div>
+          <h3>Авторские эскизы</h3>
+          <p>Индивидуальные и эксклюзивные эскизы с нуля. Вы описываете идею — я создаю уникальный рисунок, адаптированный под ваше тело. Доступна библиотека готовых эскизов.</p>
+        </div>
+      </article>
+      <article class="service-block fade-in">
+        <div class="service-block__image">
+          <img src="assets/images/instagram/ig-08.jpg" alt="Закрасы и cover-up" loading="lazy">
+        </div>
+        <div>
+          <h3>Закрасы и Cover-up</h3>
+          <p>Перекрытие старых или некачественных татуировок. Атмосферные закрасы, интеграция старых работ в новую концепцию — как рукав для Артёма, где надпись вписана в общий дизайн.</p>
+        </div>
+      </article>
+      <article class="service-block fade-in">
+        <div class="service-block__image">
+          <img src="assets/images/instagram/ig-04.jpg" alt="Лазерное удаление" loading="lazy">
+        </div>
+        <div>
+          <h3>Лазерное удаление</h3>
+          <p>Безопасное удаление и осветление татуировок лазером. Консультация перед процедурой обязательна. Возможность перекрытия старой работы новой.</p>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section class="section" style="background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);">
+  <section class="section section--paper">
     <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-badge">Процесс</span>
+      <div class="section-header section-header--center fade-in">
+        <span class="section-label">Процесс</span>
         <h2>Как это работает</h2>
         <p>От первого сообщения до зажившей работы — прозрачный и комфортный процесс.</p>
       </div>
-      <div class="process-steps fade-in">
-        <div class="process-step">
-          <h3>Консультация</h3>
-          <p>Обсуждаем идею, место, размер, стиль и бюджет. Можно написать в Telegram, Instagram или позвонить в студию.</p>
-        </div>
-        <div class="process-step">
-          <h3>Эскиз</h3>
-          <p>Разрабатываю индивидуальный эскиз или предлагаю варианты из библиотеки. Вносим правки до полного согласования.</p>
-        </div>
-        <div class="process-step">
-          <h3>Сеанс</h3>
-          <p>Работаю в комфортной обстановке студии Tattoo EXTRA. Использую профессиональное оборудование и качественные пигменты.</p>
-        </div>
-        <div class="process-step">
-          <h3>Уход и результат</h3>
-          <p>Даю подробные рекомендации по заживлению. Остаюсь на связи и показываю результат в портфолио (с вашего согласия).</p>
-        </div>
+      <div class="process-grid fade-in">
+        <div class="process-item"><h3>01 · Консультация</h3><p>Обсуждаем идею, место, размер, стиль и бюджет. Telegram, Instagram или звонок в студию.</p></div>
+        <div class="process-item"><h3>02 · Эскиз</h3><p>Индивидуальный эскиз или варианты из библиотеки. Правки до полного согласования.</p></div>
+        <div class="process-item"><h3>03 · Сеанс</h3><p>Студия Tattoo EXTRA. Профессиональное оборудование и качественные пигменты.</p></div>
+        <div class="process-item"><h3>04 · Уход</h3><p>Рекомендации по заживлению. Остаюсь на связи, результат в портфолио — с вашего согласия.</p></div>
       </div>
     </div>
   </section>
@@ -150,94 +101,64 @@
   <section class="section">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-badge">Дополнительно</span>
+        <span class="section-label">Дополнительно</span>
         <h2>Специальные форматы</h2>
       </div>
-      <div class="grid-3">
-        <article class="feature-card fade-in">
-          <div class="feature-card-emoji">💕</div>
-          <div class="feature-card-icon"><i data-lucide="heart" style="width:22px;height:22px"></i></div>
+      <div class="grid-3" data-stagger>
+        <article class="feature-item fade-in">
+          <i data-lucide="heart" class="icon-lg"></i>
           <h3>Парные тату</h3>
-          <p>Работы для двоих с общей концепцией — «такие разные, но об одном». Имена, символы, complementing designs.</p>
+          <p>Работы для двоих с общей концепцией. Имена, символы, complementing designs.</p>
         </article>
-        <article class="feature-card fade-in">
-          <div class="feature-card-emoji">🌸</div>
-          <div class="feature-card-icon"><i data-lucide="flower-2" style="width:22px;height:22px"></i></div>
+        <article class="feature-item fade-in">
+          <i data-lucide="flower-2" class="icon-lg"></i>
           <h3>Цветочные браслеты</h3>
-          <p>Изящное решение для оформления запястья — элегантная альтернатива классическим чёрным татуировкам.</p>
+          <p>Изящное решение для запястья — элегантная альтернатива классическим тату.</p>
         </article>
-        <article class="feature-card fade-in">
-          <div class="feature-card-emoji">⚡</div>
-          <div class="feature-card-icon"><i data-lucide="zap" style="width:22px;height:22px"></i></div>
+        <article class="feature-item fade-in">
+          <i data-lucide="maximize-2" class="icon-lg"></i>
           <h3>Крупные проекты</h3>
-          <p>Рукава, спины, ноги — масштабные работы с единой художественной концепцией. Несколько сеансов по плану.</p>
+          <p>Рукава, спины, ноги — масштабные работы с единой художественной концепцией.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);">
-    <div class="container">
-      <div class="cta-banner fade-in">
-        <h2>Обсудим ваш проект?</h2>
-        <p>Напишите мне — отвечу на все вопросы и помогу определиться с идеей.</p>
-        <a href="contact.html" class="btn btn-primary">Связаться</a>
-      </div>
+  <section class="cta-strip">
+    <div class="fade-in">
+      <h2>Обсудим ваш проект?</h2>
+      <p>Напишите мне — отвечу на все вопросы и помогу определиться с идеей.</p>
+      <a href="contact.html" class="btn-ghost btn-ghost--light">Связаться ↗</a>
     </div>
   </section>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <span class="logo-icon">🖋️</span>
-            <div>
-              <span class="logo-name">Serge Fomin</span>
-              <span class="logo-tagline">Tattoo Artist · Perm</span>
-            </div>
-          </a>
-          <p>Профессиональный тату-мастер. Индивидуальный подход, авторские эскизы, работы высочайшего качества. ✨</p>
-        </div>
-        <div class="footer-col">
-          <h4>Навигация</h4>
-          <ul>
-            <li><a href="about.html">О мастере</a></li>
-            <li><a href="services.html">Услуги</a></li>
-            <li><a href="portfolio.html">Работы</a></li>
-            <li><a href="sketches.html">Эскизы</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Студия</h4>
-          <ul>
-            <li><a href="contact.html">Tattoo EXTRA</a></li>
-            <li><a href="contact.html">ул. Ленина, 27</a></li>
-            <li><a href="tel:+73422101441">+7 (342) 210-14-41</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Соцсети</h4>
-          <ul>
-            <li><a href="https://www.instagram.com/sergio_fom" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://t.me/sergio_fom_tattoos" target="_blank" rel="noopener">Telegram</a></li>
-            <li><a href="https://m.vk.ru/sergio_fom" target="_blank" rel="noopener">ВКонтакте</a></li>
-          </ul>
-        </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-pill" style="position:static;transform:none;display:inline-block;color:var(--color-carbon);border-color:var(--color-carbon)">Serge Fomin</a>
+        <p>Профессиональный тату-мастер. Индивидуальный подход, авторские эскизы, работы высочайшего качества.</p>
       </div>
-      <div class="footer-bottom">
-        <span>© 2026 Сергей Фомин. Все права защищены.</span>
-        <span>Пермь, Россия 🇷🇺</span>
-      </div>
+      <div class="footer-col"><h4>Навигация</h4><ul>
+        <li><a href="about.html">О мастере</a></li><li><a href="services.html">Услуги</a></li>
+        <li><a href="portfolio.html">Работы</a></li><li><a href="sketches.html">Эскизы</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Студия</h4><ul>
+        <li><a href="contact.html">Tattoo EXTRA</a></li><li><a href="contact.html">ул. Ленина, 27</a></li>
+        <li><a href="tel:+73422101441">+7 (342) 210-14-41</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Соцсети</h4><ul>
+        <li><a href="https://www.instagram.com/sergio_fom" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://t.me/sergio_fom_tattoos" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://m.vk.ru/sergio_fom" target="_blank" rel="noopener">ВКонтакте</a></li>
+      </ul></div>
     </div>
+    <div class="footer-bottom"><span>© 2026 Сергей Фомин</span><span>Пермь, Россия</span></div>
   </footer>
 
-  
   <div class="mobile-cta-bar">
-    <a href="portfolio.html" class="btn btn-outline">Работы</a>
-    <a href="contact.html" class="btn btn-primary">Записаться</a>
+    <a href="portfolio.html" class="btn-ghost">Работы</a>
+    <a href="contact.html" class="btn-ghost">Записаться ↗</a>
   </div>
-
   <script src="js/main.js"></script>
 </body>
 </html>
