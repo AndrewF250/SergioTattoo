@@ -7,56 +7,37 @@
   <title>Эскизы — Сергей Фомин</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 
-  <div class="bg-orbs" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
-
   <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <span class="logo-icon">🖋️</span>
-        <div>
-          <span class="logo-name">Serge Fomin</span>
-          <span class="logo-tagline">Tattoo Artist · Perm</span>
-        </div>
-      </a>
-      <nav>
-        <button class="nav-toggle" aria-label="Меню">
-          <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="about.html">О мастере</a></li>
-          <li><a href="services.html">Услуги</a></li>
-          <li><a href="portfolio.html">Работы</a></li>
-          <li><a href="sketches.html" class="active">Эскизы</a></li>
-          <li><a href="contact.html">Контакты</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <a href="contact.html" class="header-cta">
-          Записаться
-          <i data-lucide="arrow-right" class="arrow-icon" style="width:16px;height:16px"></i>
-        </a>
-      </div>
+    <div class="header-bar">
+      <button class="nav-toggle" aria-label="Меню" aria-expanded="false">
+        <i data-lucide="menu" class="icon"></i>
+      </button>
+      <a href="index.html" class="logo-pill">Serge Fomin</a>
+      <a href="contact.html" class="btn-ghost btn-ghost--light header-book">Записаться ↗</a>
     </div>
+    <nav class="nav-drawer" aria-hidden="true">
+      <ul class="nav-list">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О мастере</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="portfolio.html">Работы</a></li>
+        <li><a href="sketches.html" class="active">Эскизы</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="page-hero">
+  <section class="page-hero-dark">
     <div class="container fade-in">
-      <nav class="breadcrumb">
-        <a href="index.html">Главная</a> / <span>Эскизы</span>
-      </nav>
-      <p <h1>Библиотека эскизов</h1>
-      <p>Готовые эскизы, доступные для нанесения, или индивидуальная разработка под вашу уникальную идею.</p>
+      <nav class="breadcrumb"><a href="index.html">Главная</a> / <span>Эскизы</span></nav>
+      <h1>Библиотека эскизов</h1>
+      <p>Готовые эскизы для нанесения или индивидуальная разработка под вашу уникальную идею.</p>
     </div>
   </section>
 
@@ -73,174 +54,93 @@
 
       <div class="grid-4" data-stagger>
         <article class="sketch-card fade-in" data-category="available ornamental">
-          <div class="sketch-card-image">
-            <img src="assets/images/instagram/ig-07.jpg" alt="Орнаментальный mandala">
-          </div>
-          <div class="sketch-card-body">
-            <span class="sketch-status available">Доступен</span>
-            <h3>Орнаментальный mandala</h3>
-            <p>Геометрия и орнамент · предплечье или плечо</p>
-          </div>
+          <div class="sketch-card-image"><img src="assets/images/instagram/ig-07.jpg" alt="Орнаментальный mandala" loading="lazy"></div>
+          <div class="sketch-card-body"><span class="sketch-status">Доступен</span><h3>Орнаментальный mandala</h3><p>Геометрия · предплечье или плечо</p></div>
         </article>
-
         <article class="sketch-card fade-in" data-category="available realism">
-          <div class="sketch-card-image">
-            <img src="assets/images/instagram/ig-11.jpg" alt="Реалистичный портрет">
-          </div>
-          <div class="sketch-card-body">
-            <span class="sketch-status available">Доступен</span>
-            <h3>Реалистичный портрет</h3>
-            <p>Black & Gray · плечо, грудь или спина</p>
-          </div>
+          <div class="sketch-card-image"><img src="assets/images/instagram/ig-11.jpg" alt="Реалистичный портрет" loading="lazy"></div>
+          <div class="sketch-card-body"><span class="sketch-status">Доступен</span><h3>Реалистичный портрет</h3><p>Black & Gray · плечо или грудь</p></div>
         </article>
-
         <article class="sketch-card fade-in" data-category="available ornamental">
-          <div class="sketch-card-image">
-            <img src="assets/images/works/work-13.jpg" alt="Геометрический орнамент">
-          </div>
-          <div class="sketch-card-body">
-            <span class="sketch-status available">Доступен</span>
-            <h3>Геометрический орнамент</h3>
-            <p>Dotwork и linework · запястье или предплечье</p>
-          </div>
+          <div class="sketch-card-image"><img src="assets/images/works/work-13.jpg" alt="Геометрический орнамент" loading="lazy"></div>
+          <div class="sketch-card-body"><span class="sketch-status">Доступен</span><h3>Геометрический орнамент</h3><p>Dotwork · запястье или предплечье</p></div>
         </article>
-
         <article class="sketch-card fade-in" data-category="available ornamental">
-          <div class="sketch-card-image">
-            <img src="assets/images/instagram/ig-10.jpg" alt="Цветочный браслет">
-          </div>
-          <div class="sketch-card-body">
-            <span class="sketch-status available">Доступен</span>
-            <h3>Цветочный браслет</h3>
-            <p>Изящное решение · запястье или щиколотка</p>
-          </div>
+          <div class="sketch-card-image"><img src="assets/images/instagram/ig-10.jpg" alt="Цветочный браслет" loading="lazy"></div>
+          <div class="sketch-card-body"><span class="sketch-status">Доступен</span><h3>Цветочный браслет</h3><p>Изящное решение · запястье</p></div>
         </article>
-
         <article class="sketch-card fade-in" data-category="available lettering">
-          <div class="sketch-card-image">
-            <img src="assets/images/works/work-14.jpg" alt="Каллиграфическая надпись">
-          </div>
-          <div class="sketch-card-body">
-            <span class="sketch-status available">Доступен</span>
-            <h3>Каллиграфическая надпись</h3>
-            <p>Lettering · ребро, предплечье или запястье</p>
-          </div>
+          <div class="sketch-card-image"><img src="assets/images/works/work-14.jpg" alt="Каллиграфическая надпись" loading="lazy"></div>
+          <div class="sketch-card-body"><span class="sketch-status">Доступен</span><h3>Каллиграфическая надпись</h3><p>Lettering · предплечье или запястье</p></div>
         </article>
-
         <article class="sketch-card fade-in" data-category="available realism">
-          <div class="sketch-card-image">
-            <img src="assets/images/works/work-03.jpg" alt="Животное в реализме">
-          </div>
-          <div class="sketch-card-body">
-            <span class="sketch-status available">Доступен</span>
-            <h3>Животное · реализм</h3>
-            <p>Black & Gray · любая зона тела</p>
-          </div>
+          <div class="sketch-card-image"><img src="assets/images/works/work-03.jpg" alt="Животное в реализме" loading="lazy"></div>
+          <div class="sketch-card-body"><span class="sketch-status">Доступен</span><h3>Животное · реализм</h3><p>Black & Gray · любая зона</p></div>
         </article>
-
         <article class="sketch-card fade-in" data-category="available ornamental">
-          <div class="sketch-card-image">
-            <img src="assets/images/instagram/ig-02.jpg" alt="Декоративный узор">
-          </div>
-          <div class="sketch-card-body">
-            <span class="sketch-status available">Доступен</span>
-            <h3>Декоративный узор</h3>
-            <p>Орнаментал · бедро или спина</p>
-          </div>
+          <div class="sketch-card-image"><img src="assets/images/instagram/ig-02.jpg" alt="Декоративный узор" loading="lazy"></div>
+          <div class="sketch-card-body"><span class="sketch-status">Доступен</span><h3>Декоративный узор</h3><p>Орнаментал · бедро или спина</p></div>
         </article>
-
         <article class="sketch-card fade-in" data-category="custom">
-          <div class="sketch-card-image">
-            <img src="assets/images/instagram/ig-12.jpg" alt="Индивидуальный эскиз">
-          </div>
-          <div class="sketch-card-body">
-            <span class="sketch-status custom">Под заказ</span>
-            <h3>Ваш уникальный эскиз</h3>
-            <p>Разработаю с нуля под вашу идею и анатомию</p>
-          </div>
+          <div class="sketch-card-image"><img src="assets/images/instagram/ig-12.jpg" alt="Индивидуальный эскиз" loading="lazy"></div>
+          <div class="sketch-card-body"><span class="sketch-status">Под заказ</span><h3>Ваш уникальный эскиз</h3><p>Разработаю с нуля под вашу идею</p></div>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);">
+  <section class="section section--paper">
     <div class="container">
       <div class="split-section">
-        <div class="split-content fade-in">
-          <span class="section-badge">Индивидуальная разработка</span>
+        <div class="fade-in">
+          <span class="section-label">Индивидуальная разработка</span>
           <h2>Эскиз под заказ</h2>
-          <p style="color: var(--text-muted); margin-top: 1rem;">
-            Не нашли подходящий эскиз в библиотеке? Я создам уникальный рисунок специально для вас.
-            Расскажите о своей идее, покажите референсы — и мы вместе доведём эскиз до идеала
-            перед сеансом.
+          <p class="text-muted mt-32">
+            Не нашли подходящий эскиз? Создам уникальный рисунок специально для вас —
+            с учётом анатомии, стиля и вашей истории.
           </p>
-          <ul class="check-list">
-            <li>Бесплатная первичная консультация по идее</li>
-            <li>Несколько вариантов на выбор</li>
-            <li>Адаптация под анатомию и существующие тату</li>
-            <li>Правки до полного согласования</li>
+          <ul class="spec-list mt-32">
+            <li><strong>Консультация</strong> Бесплатная первичная консультация по идее</li>
+            <li><strong>Варианты</strong> Несколько направлений на выбор</li>
+            <li><strong>Адаптация</strong> Под анатомию и существующие тату</li>
+            <li><strong>Правки</strong> До полного согласования</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary" style="margin-top: 2rem;">Заказать эскиз</a>
+          <a href="contact.html" class="btn-ghost mt-32">Заказать эскиз ↗</a>
         </div>
         <div class="split-image fade-in">
-          <img src="assets/images/instagram/ig-12.jpg" alt="Процесс создания эскиза">
+          <img src="assets/images/instagram/ig-12.jpg" alt="Процесс создания эскиза" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <span class="logo-icon">🖋️</span>
-            <div>
-              <span class="logo-name">Serge Fomin</span>
-              <span class="logo-tagline">Tattoo Artist · Perm</span>
-            </div>
-          </a>
-          <p>Профессиональный тату-мастер. Индивидуальный подход, авторские эскизы, работы высочайшего качества. ✨</p>
-        </div>
-        <div class="footer-col">
-          <h4>Навигация</h4>
-          <ul>
-            <li><a href="about.html">О мастере</a></li>
-            <li><a href="services.html">Услуги</a></li>
-            <li><a href="portfolio.html">Работы</a></li>
-            <li><a href="sketches.html">Эскизы</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Студия</h4>
-          <ul>
-            <li><a href="contact.html">Tattoo EXTRA</a></li>
-            <li><a href="contact.html">ул. Ленина, 27</a></li>
-            <li><a href="tel:+73422101441">+7 (342) 210-14-41</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Соцсети</h4>
-          <ul>
-            <li><a href="https://www.instagram.com/sergio_fom" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://t.me/sergio_fom_tattoos" target="_blank" rel="noopener">Telegram</a></li>
-            <li><a href="https://m.vk.ru/sergio_fom" target="_blank" rel="noopener">ВКонтакте</a></li>
-          </ul>
-        </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-pill" style="position:static;transform:none;display:inline-block;color:var(--color-carbon);border-color:var(--color-carbon)">Serge Fomin</a>
+        <p>Профессиональный тату-мастер. Индивидуальный подход, авторские эскизы, работы высочайшего качества.</p>
       </div>
-      <div class="footer-bottom">
-        <span>© 2026 Сергей Фомин. Все права защищены.</span>
-        <span>Пермь, Россия 🇷🇺</span>
-      </div>
+      <div class="footer-col"><h4>Навигация</h4><ul>
+        <li><a href="about.html">О мастере</a></li><li><a href="services.html">Услуги</a></li>
+        <li><a href="portfolio.html">Работы</a></li><li><a href="sketches.html">Эскизы</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Студия</h4><ul>
+        <li><a href="contact.html">Tattoo EXTRA</a></li><li><a href="contact.html">ул. Ленина, 27</a></li>
+        <li><a href="tel:+73422101441">+7 (342) 210-14-41</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Соцсети</h4><ul>
+        <li><a href="https://www.instagram.com/sergio_fom" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://t.me/sergio_fom_tattoos" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://m.vk.ru/sergio_fom" target="_blank" rel="noopener">ВКонтакте</a></li>
+      </ul></div>
     </div>
+    <div class="footer-bottom"><span>© 2026 Сергей Фомин</span><span>Пермь, Россия</span></div>
   </footer>
 
-  
   <div class="mobile-cta-bar">
-    <a href="portfolio.html" class="btn btn-outline">Работы</a>
-    <a href="contact.html" class="btn btn-primary">Записаться</a>
+    <a href="portfolio.html" class="btn-ghost">Работы</a>
+    <a href="contact.html" class="btn-ghost">Записаться ↗</a>
   </div>
-
   <script src="js/main.js"></script>
 </body>
 </html>

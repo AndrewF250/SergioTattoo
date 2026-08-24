@@ -7,56 +7,37 @@
   <title>Работы — Сергей Фомин</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 
-  <div class="bg-orbs" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
-
   <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <span class="logo-icon">🖋️</span>
-        <div>
-          <span class="logo-name">Serge Fomin</span>
-          <span class="logo-tagline">Tattoo Artist · Perm</span>
-        </div>
-      </a>
-      <nav>
-        <button class="nav-toggle" aria-label="Меню">
-          <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="about.html">О мастере</a></li>
-          <li><a href="services.html">Услуги</a></li>
-          <li><a href="portfolio.html" class="active">Работы</a></li>
-          <li><a href="sketches.html">Эскизы</a></li>
-          <li><a href="contact.html">Контакты</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <a href="contact.html" class="header-cta">
-          Записаться
-          <i data-lucide="arrow-right" class="arrow-icon" style="width:16px;height:16px"></i>
-        </a>
-      </div>
+    <div class="header-bar">
+      <button class="nav-toggle" aria-label="Меню" aria-expanded="false">
+        <i data-lucide="menu" class="icon"></i>
+      </button>
+      <a href="index.html" class="logo-pill">Serge Fomin</a>
+      <a href="contact.html" class="btn-ghost btn-ghost--light header-book">Записаться ↗</a>
     </div>
+    <nav class="nav-drawer" aria-hidden="true">
+      <ul class="nav-list">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О мастере</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="portfolio.html" class="active">Работы</a></li>
+        <li><a href="sketches.html">Эскизы</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="page-hero">
+  <section class="page-hero-dark">
     <div class="container fade-in">
-      <nav class="breadcrumb">
-        <a href="index.html">Главная</a> / <span>Работы</span>
-      </nav>
-      <p <h1>Портфолио</h1>
-      <p>Свежие и зажившие работы. Актуальное портфолио — в Instagram и Telegram-канале.</p>
+      <nav class="breadcrumb"><a href="index.html">Главная</a> / <span>Работы</span></nav>
+      <h1>Портфолио</h1>
+      <p>Свежие и зажившие работы. Актуальное портфолио — в Instagram и Telegram.</p>
     </div>
   </section>
 
@@ -215,68 +196,41 @@
         </div>
       </div>
 
-      <div class="cta-banner fade-in" style="margin-top: 4rem;">
-        <h2>Больше работ в соцсетях</h2>
-        <p>Свежий контент, процесс работы и эксклюзивные новости — в Telegram и Instagram.</p>
-        <div class="social-links" style="justify-content: center;">
-          <a href="https://www.instagram.com/sergio_fom" target="_blank" rel="noopener" class="social-link">
-            Instagram @sergio_fom
-          </a>
-          <a href="https://t.me/sergio_fom_tattoos" target="_blank" rel="noopener" class="social-link">
-            Telegram
-          </a>
-          <a href="https://m.vk.ru/sergio_fom" target="_blank" rel="noopener" class="social-link">
-            ВКонтакте
-          </a>
+      <div class="section section--paper mt-48 fade-in">
+        <div class="section-header section-header--center">
+          <h2>Больше работ в соцсетях</h2>
+          <p class="text-muted">Свежий контент, процесс работы и новости — в Telegram и Instagram.</p>
+        </div>
+        <div class="social-links" style="justify-content:center">
+          <a href="https://www.instagram.com/sergio_fom" target="_blank" rel="noopener" class="social-link">Instagram @sergio_fom</a>
+          <a href="https://t.me/sergio_fom_tattoos" target="_blank" rel="noopener" class="social-link">Telegram</a>
+          <a href="https://m.vk.ru/sergio_fom" target="_blank" rel="noopener" class="social-link">ВКонтакте</a>
         </div>
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <span class="logo-icon">🖋️</span>
-            <div>
-              <span class="logo-name">Serge Fomin</span>
-              <span class="logo-tagline">Tattoo Artist · Perm</span>
-            </div>
-          </a>
-          <p>Профессиональный тату-мастер. Индивидуальный подход, авторские эскизы, работы высочайшего качества. ✨</p>
-        </div>
-        <div class="footer-col">
-          <h4>Навигация</h4>
-          <ul>
-            <li><a href="about.html">О мастере</a></li>
-            <li><a href="services.html">Услуги</a></li>
-            <li><a href="portfolio.html">Работы</a></li>
-            <li><a href="sketches.html">Эскизы</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Студия</h4>
-          <ul>
-            <li><a href="contact.html">Tattoo EXTRA</a></li>
-            <li><a href="contact.html">ул. Ленина, 27</a></li>
-            <li><a href="tel:+73422101441">+7 (342) 210-14-41</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Соцсети</h4>
-          <ul>
-            <li><a href="https://www.instagram.com/sergio_fom" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://t.me/sergio_fom_tattoos" target="_blank" rel="noopener">Telegram</a></li>
-            <li><a href="https://m.vk.ru/sergio_fom" target="_blank" rel="noopener">ВКонтакте</a></li>
-          </ul>
-        </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-pill" style="position:static;transform:none;display:inline-block;color:var(--color-carbon);border-color:var(--color-carbon)">Serge Fomin</a>
+        <p>Профессиональный тату-мастер. Индивидуальный подход, авторские эскизы, работы высочайшего качества.</p>
       </div>
-      <div class="footer-bottom">
-        <span>© 2026 Сергей Фомин. Все права защищены.</span>
-        <span>Пермь, Россия 🇷🇺</span>
-      </div>
+      <div class="footer-col"><h4>Навигация</h4><ul>
+        <li><a href="about.html">О мастере</a></li><li><a href="services.html">Услуги</a></li>
+        <li><a href="portfolio.html">Работы</a></li><li><a href="sketches.html">Эскизы</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Студия</h4><ul>
+        <li><a href="contact.html">Tattoo EXTRA</a></li><li><a href="contact.html">ул. Ленина, 27</a></li>
+        <li><a href="tel:+73422101441">+7 (342) 210-14-41</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Соцсети</h4><ul>
+        <li><a href="https://www.instagram.com/sergio_fom" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://t.me/sergio_fom_tattoos" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://m.vk.ru/sergio_fom" target="_blank" rel="noopener">ВКонтакте</a></li>
+      </ul></div>
     </div>
+    <div class="footer-bottom"><span>© 2026 Сергей Фомин</span><span>Пермь, Россия</span></div>
   </footer>
 
   <div id="lightbox" class="lightbox">
@@ -287,8 +241,8 @@
 
   
   <div class="mobile-cta-bar">
-    <a href="portfolio.html" class="btn btn-outline">Работы</a>
-    <a href="contact.html" class="btn btn-primary">Записаться</a>
+    <a href="portfolio.html" class="btn-ghost">Работы</a>
+    <a href="contact.html" class="btn-ghost">Записаться ↗</a>
   </div>
 
   <script src="js/main.js"></script>
